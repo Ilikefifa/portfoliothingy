@@ -21,9 +21,9 @@
     <header id="header">
       <nav>
         <ul id="nav-list">
-          <li><a href="#">About me</a></li>
-          <li><a href="#">My likes</a></li>
-          <li><a href="#">My dislikes</a></li>
+          <li><a href="#">About Me</a></li>
+          <li><a href="#">My Likes</a></li>
+          <li><a href="#">My Dislikes</a></li>
           <li><a href="#">Contact Me</a></li>
         </ul>
       </nav>
@@ -47,18 +47,18 @@
     </main>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script>
-      const mainSwiper = new Swiper(".main-swiper", {
-        direction: "vertical",
+      const mainSwiper = new Swiper('.main-swiper', {
+        direction: 'vertical',
         mousewheel: true,
       });
 
       document
-        .querySelector("#nav-list")
-        .addEventListener("click", function (event) {
+        .querySelector('#nav-list')
+        .addEventListener('click', function (event) {
           var target = event.target;
-          if (target.tagName === "A") {
+          if (target.tagName === 'A') {
             event.preventDefault();
-            var parent = document.querySelector("#nav-list");
+            var parent = document.querySelector('#nav-list');
             var index = Array.from(parent.children).indexOf(
               target.parentElement
             );
