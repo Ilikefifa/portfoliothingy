@@ -39,7 +39,50 @@
               <h2>Hi, my name is Kellan</h2>
             </div>
           </div>
-          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">
+            <div>
+              <h2>These are my likes...</h2>
+              <div class="swiper sub-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img
+                      src="./img/Like-charizard.png"
+                      alt="Charizard picture, a pokemon"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/Like-Dogs.avif" alt="A picture of a dog." />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./img/Like-ea fc 24.jpg"
+                      alt="A picture of a game"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./img/Like-gaming.webp"
+                      alt="A picture of a gaming text."
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./img/Like-gksoccergloves.jpg"
+                      alt="A picture of soccer gloves."
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./img/Like-man city.jpeg"
+                      alt="A picture of a man city badge"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <a href="./pages/like.html">click!</a>
+            </div>
+          </div>
           <div class="swiper-slide">Slide 3</div>
           <div class="swiper-slide">Slide 4</div>
         </div>
@@ -50,6 +93,17 @@
       const mainSwiper = new Swiper(".main-swiper", {
         direction: "vertical",
         mousewheel: true,
+      });
+
+      const subSwiper = new Swiper(".sub-swiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
+        loop: true,
       });
 
       document
