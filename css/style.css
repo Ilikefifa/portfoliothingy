@@ -1,5 +1,5 @@
 #header {
-  position: fixed;
+  position: static;
   top: 0;
   left: 0;
   width: 100%;
@@ -9,8 +9,8 @@
 
 #nav-list {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   height: 50px;
   gap: 50px;
 }

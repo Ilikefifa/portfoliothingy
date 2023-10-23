@@ -1,0 +1,37 @@
+:root {
+  --primary50: "#defff9";
+  --primary100: "#aefcef";
+  --primary200: "#83f5e2";
+  --primary300: "#5bebd3";
+  --primary400: "#2ee5c7";
+  --primary500: "#24d1b4";
+  --primary600: "#28b099";
+  --primary700: "#2a907f";
+  --primary800: "#297367";
+  --primary900: "#265850";
+}
+
+.page {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.page-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.page-menu-list li:first-child {
+  font-weight: bold;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
