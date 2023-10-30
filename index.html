@@ -13,6 +13,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
+    <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Kellan's Portfolio</title>
@@ -20,7 +21,7 @@
   <body>
     <header id="header">
       <nav>
-        <ul id="page-menu-list">
+        <ul id="nav-list">
           <li><a href="#">About Me</a></li>
           <li><a href="#">My Likes</a></li>
           <li><a href="#">My Dislikes</a></li>
@@ -29,14 +30,14 @@
       </nav>
     </header>
     <main id="main">
-      <!-- Slider main container -->
       <div class="swiper main-swiper">
-        <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
-          <!-- Slides -->
           <div class="swiper-slide">
             <div>
               <h2>Hi, my name is Kellan</h2>
+              <a href="#" class="down-button">
+                <i data-feather="chevron-down" width="48px" height="48x"></i>
+              </a>
             </div>
           </div>
           <div class="swiper-slide">
@@ -80,7 +81,7 @@
                 </div>
               </div>
 
-              <a href="./pages/like.html">click!</a>
+              <a href="./pages/like.html" class="page-nav-button">click!</a>
             </div>
           </div>
           <div class="swiper-slide">My Dislikes</div>
@@ -90,12 +91,12 @@
     </main>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script>
-      const mainSwiper = new Swiper(".main-swiper", {
-        direction: "vertical",
+      const mainSwiper = new Swiper('.main-swiper', {
+        direction: 'vertical',
         mousewheel: true,
       });
 
-      const subSwiper = new Swiper(".sub-swiper", {
+      const subSwiper = new Swiper('.sub-swiper', {
         slidesPerView: 3,
         spaceBetween: 30,
         autoplay: {
@@ -107,17 +108,24 @@
       });
 
       document
-        .querySelector("#nav-list")
-        .addEventListener("click", function (event) {
+        .querySelector('#nav-list')
+        .addEventListener('click', function (event) {
           var target = event.target;
-          if (target.tagName === "A") {
+          if (target.tagName === 'A') {
             event.preventDefault();
-            var parent = document.querySelector("#nav-list");
+            var parent = document.querySelector('#nav-list');
             var index = Array.from(parent.children).indexOf(
               target.parentElement
             );
             mainSwiper.slideTo(index);
           }
+        });
+
+      document
+        .querySelector('.down-button')
+        .addEventListener('click', function (event) {
+          event.preventDefault();
+          menuSwiper.slideNext();
         });
     </script>
   </body>
