@@ -3,14 +3,132 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/pages.css" />
+    <title>My dislikes</title>
   </head>
   <body>
-    <main>
-      <article>
-        <h1>Title of Article</h1>
-        <p>somethingsomething</p>
-      </article>
+    <main class="page">
+      <nav class="page-menu">
+        <a href="../index.html" class="home-button">Home</a>
+        <ul class="page-menu-list my-dislikes">
+          <li>
+            <p>My dislikes</p>
+          </li>
+          <li><a href="#" data-title="article1">Blobfish</a></li>
+          <li><a href="#" data-title="article2">English Academie</a></li>
+          <li><a href="#" data-title="article3">H.W.</a></li>
+          <li><a href="#" data-title="article4">Justin Beaver</a></li>
+          <li><a href="#" data-title="article5">Ronaldo</a></li>
+          <li><a href="#" data-title="article6">School</a></li>
+        </ul>
+      </nav>
+      <div class="page-article">
+        <article id="article1">
+          <h2>blobfish</h2>
+          <img src="../img/dislike-bobfish.webp" alt="A pic of a blobfish" />
+          <p>
+            Blobfish look almost unrecognizable underwater: These tadpole-shaped
+            fish have bulbous heads, large jaws, tapered tails, and feathery
+            pectoral fins. Rather than scales, they have loose, flabby skin.
+            They don't have strong bones or thick muscle—instead, they rely on
+            the water pressure to hold their shape together. I dislike it
+            becasue it's ugly af. LIKE LOOK AT THAT, WHAT ARE THOSE!!!!!
+          </p>
+        </article>
+        <article id="article2" class="hide">
+          <h2>english academie</h2>
+          <p>
+            English Academy is TOTALY an interactive, online course that
+            cultivates children's interest in English language learning.
+            Students from primary school follow the story of children and their
+            teachers as they communicate in reading, writing, listening, and
+            speaking. I dislike this because it's a waste of time and it is a
+            waste of living time and money.
+            <img
+              src="../img/dislike-english academie.png"
+              alt="A pic of a english academie"
+            />
+          </p>
+        </article>
+        <article id="article3" class="hide">
+          <h2>H.W.</h2>
+          <p>
+            Homework is an important part of a student's education as it helps
+            in developing various core skills that serve them a lifetime. It
+            reinforces learning and helps students retain and understand the
+            material better. I dislike it becasue it takes to much time to do
+            it.
+            <img src="../img/dislike-h.w..web.png" alt="A picture of H.W." />
+          </p>
+        </article>
+        <article id="article4" class="hide">
+          <h2>Justin Beaver</h2>
+          <p>
+            No info about JUSTIN BEAVER, A beaver whos name is Justin who is a
+            very famous singer in the beaver world.
+            <img
+              src="../img/dislike-Justin Beaver.webp"
+              alt="A picture of Justin Beaver"
+            />
+          </p>
+        </article>
+        <article id="article5" class="hide">
+          <h2>Ronaldo</h2>
+          <p>
+            He was born in Portugal. He grew up in his hometown called Madeira
+            and when he was twelve he moved to Lisbon. He always had a passion
+            over football since his childhood. Ronaldo started his football
+            career as a youth player for Andorinha, he played for two years
+            there then later he went to C.D. I dislike him becasue he is gready
+            and he is very mean and he is bad at his job.
+            <img
+              src="../img/dislike-ronaldo.jpg"
+              alt="A picture of a pentalty merchant whos greddy af."
+            />
+          </p>
+        </article>
+        <article id="article6" class="hide">
+          <h2>School</h2>
+          <p>
+            What is the short description of school? Schools are organized
+            spaces purposed for teaching and learning. The classrooms where
+            teachers teach and students learn are of central importance.
+            Classrooms may be specialized for certain subjects, such as
+            laboratory classrooms for science education and workshops for
+            industrial arts education. I dislike it because... OH NO NOT AGAIN
+            MY MOM IS SPANKING ME FOR NOT LIKING SCHOOL OOF
+            <img src="../img/dislike-school.jpg" alt="A picture of a school" />
+          </p>
+        </article>
+      </div>
     </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        function handleArticleClick(event) {
+          if (event.target.tagName === "A") {
+            event.preventDefault();
+
+            var title = event.target.getAttribute("data-title");
+            var articles = document.querySelectorAll("article");
+
+            articles.forEach(function (article) {
+              article.classList.add("hide");
+              article.classList.remove("show");
+
+              if (article.id === title) {
+                article.classList.add("show");
+                article.classList.remove("hide");
+              }
+            });
+          }
+        }
+
+        document
+          .querySelector(".my-dislikes")
+          .addEventListener("click", handleArticleClick);
+      });
+    </script>
   </body>
 </html>
