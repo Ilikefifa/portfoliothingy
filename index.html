@@ -145,7 +145,13 @@
               </div>
             </div>
           </div>
-          <div class="swiper-slide">Contact me</div>
+          <div class="swiper-slide">
+            <div class="contact-me">
+              <a href="https://github.com/Ilikefifa">
+          <h2>Check out my Github!</h2>
+            <i data-feather="github" width="100px" height="100px"></i>
+          </a>
+          </div>
         </div>
       </div>
     </main>
@@ -153,12 +159,12 @@
     <script>
       feather.replace();
 
-      const mainSwiper = new Swiper('.main-swiper', {
-        direction: 'vertical',
+      const mainSwiper = new Swiper(".main-swiper", {
+        direction: "vertical",
         mousewheel: true,
       });
 
-      const subSwiper = new Swiper('.sub-swiper', {
+      const subSwiper = new Swiper(".sub-swiper", {
         slidesPerView: 3,
         spaceBetween: 30,
         autoplay: {
@@ -170,12 +176,12 @@
       });
 
       document
-        .querySelector('#nav-list')
-        .addEventListener('click', function (event) {
+        .querySelector("#nav-list")
+        .addEventListener("click", function (event) {
           var target = event.target;
-          if (target.tagName === 'A') {
+          if (target.tagName === "A") {
             event.preventDefault();
-            var parent = document.querySelector('#nav-list');
+            var parent = document.querySelector("#nav-list");
             var index = Array.from(parent.children).indexOf(
               target.parentElement
             );
@@ -184,8 +190,8 @@
         });
 
       document
-        .querySelector('.down-button')
-        .addEventListener('click', function (event) {
+        .querySelector(".down-button")
+        .addEventListener("click", function (event) {
           event.preventDefault();
           mainSwiper.slideNext();
         });

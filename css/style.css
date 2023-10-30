@@ -57,7 +57,7 @@ a.page-nav-button {
 }
 
 a.page-nav-button:hover::before {
-  content: 'Go to My Likes';
+  content: "Go to My Likes";
   display: block;
   position: absolute;
   top: 50%;
@@ -68,4 +68,21 @@ a.page-nav-button:hover::before {
   padding: 5px 10px;
   border-radius: 10px;
   color: var(--primary50);
+}
+
+.contact-me a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: var(--primary300);
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+}
+
+.contact-me a:hover {
+  background-color: var(--primary500);
+  transition: all 0.3s;
 }
