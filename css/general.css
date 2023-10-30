@@ -6,12 +6,24 @@
 
 :root {
   --text-color: #555;
+  --primary50: #defff9;
+  --primary100: #aefcef;
+  --primary200: #83f5e2;
+  --primary300: #5bebd3;
+  --primary400: #2ee5c7;
+  --primary500: #24d1b4;
+  --primary600: #28b099;
+  --primary700: #2a907f;
+  --primary800: #297367;
+  --primary900: #265850;
+  --backgroundColor: #f3f6f4;
 }
 
 body {
   color: var(--text-color);
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   position: static;
+  background-color: var(--backgroundColor);
 }
 
 a {

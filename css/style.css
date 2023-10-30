@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: aquamarine;
+  background-color: var(--primary300);
   z-index: 100;
 }
 
@@ -17,7 +17,7 @@
 
 /* SWIPER */
 .main-swiper {
-  height: 100vh;
+  height: calc(100vh - 50px);
   width: 100%;
 }
 
@@ -26,6 +26,10 @@
   justify-content: center;
   align-items: center;
   position: relative;
+}
+
+.main-swiper .swiper-slide img {
+  object-fit: cover;
 }
 
 .down-button {
@@ -42,22 +46,26 @@
   width: 70vw;
 }
 
-a.page-nav-button {
-  background-color: #fafbfc;
-  border: 1px solid rgba(27, 31, 35, 0.15);
-  border-radius: 6px;
-  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0,
-    rgba(255, 255, 255, 0.25) 0 1px 0 inset;
-  box-sizing: border-box;
-  color: #24292e;
-  cursor: pointer;
-  padding: 6px 16px;
-  position: relative;
-  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+.container {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
 }
 
-a.page-nav-button:hover {
-  background-color: #f3f4f6;
-  text-decoration: none;
-  transition-duration: 0.1s;
+a.page-nav-button {
+  position: relative;
+}
+
+a.page-nav-button:hover::before {
+  content: 'Go to My Likes';
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: -15px;
+  transform: translate(100%, -50%);
+  width: max-content;
+  background-color: var(--primary600);
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: var(--primary50);
 }

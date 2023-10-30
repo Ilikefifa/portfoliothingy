@@ -42,7 +42,16 @@
           </div>
           <div class="swiper-slide">
             <div>
-              <h2>These are my likes...</h2>
+              <div class="container">
+                <h2>These are my likes</h2>
+                <a href="./pages/like.html" class="page-nav-button"
+                  ><i
+                    data-feather="arrow-right-circle"
+                    width="24px"
+                    height="24x"
+                  ></i
+                ></a>
+              </div>
               <div class="swiper sub-swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
@@ -80,17 +89,70 @@
                   </div>
                 </div>
               </div>
-
-              <a href="./pages/like.html" class="page-nav-button">click!</a>
             </div>
           </div>
-          <div class="swiper-slide">My Dislikes</div>
+          <div class="swiper-slide">
+            <div>
+              <div class="container">
+                <h2>These are my dislikes</h2>
+                <a href="./pages/dislike.html" class="page-nav-button"
+                  ><i
+                    data-feather="arrow-right-circle"
+                    width="24px"
+                    height="24x"
+                  ></i
+                ></a>
+              </div>
+              <div class="swiper sub-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img
+                      src="./img/dislike-bobfish.webp"
+                      alt="Charizard picture, a pokemon"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./img/dislike-english academie.png"
+                      alt="A picture of a dog."
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./img/dislike-h.w..webp"
+                      alt="A picture of a game"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./img/dislike-Justin Beaver.webp"
+                      alt="A picture of a gaming text."
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./img/dislike-ronaldo.jpg"
+                      alt="A picture of soccer gloves."
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./img/dislike-school.jpg"
+                      alt="A picture of a man city badge"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="swiper-slide">Contact me</div>
         </div>
       </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script>
+      feather.replace();
+
       const mainSwiper = new Swiper('.main-swiper', {
         direction: 'vertical',
         mousewheel: true,
@@ -125,7 +187,7 @@
         .querySelector('.down-button')
         .addEventListener('click', function (event) {
           event.preventDefault();
-          menuSwiper.slideNext();
+          mainSwiper.slideNext();
         });
     </script>
   </body>
