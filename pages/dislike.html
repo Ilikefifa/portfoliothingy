@@ -6,12 +6,15 @@
     <link rel="stylesheet" href="../css/general.css" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/pages.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
     <title>My dislikes</title>
   </head>
   <body>
     <main class="page">
       <nav class="page-menu">
-        <a href="../index.html" class="home-button">Home</a>
+        <a href="../index.html" class="home-button">
+          <i data-feather="home" width="24px" height="24x"></i
+        ></a>
         <ul class="page-menu-list my-dislikes">
           <li>
             <p>My dislikes</p>
@@ -105,6 +108,8 @@
       </div>
     </main>
     <script>
+      feather.replace();
+
       document.addEventListener("DOMContentLoaded", function () {
         function handleArticleClick(event) {
           if (event.target.tagName === "A") {

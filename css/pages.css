@@ -20,8 +20,8 @@ a.home-button {
   right: -50px;
 }
 
-a:hover::before {
-  content: 'Back to Home';
+a.home-button:hover::before {
+  content: "Back to Home";
   display: block;
   position: absolute;
   top: 50%;
